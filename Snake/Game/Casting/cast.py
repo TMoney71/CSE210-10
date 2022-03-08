@@ -26,6 +26,7 @@ class Cast:
         if not actor in self._actors[group]:
             self._actors[group].append(actor)
 
+    #as actor is changed, I'll update things.
     def get_actors(self, group):
         """Gets the actors in the given group.
         
