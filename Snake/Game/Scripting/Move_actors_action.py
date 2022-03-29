@@ -1,4 +1,5 @@
 from Game.Scripting.Action import Action
+from Game.Scripting.Script import Script
 
 
 class MoveActorsAction(Action):

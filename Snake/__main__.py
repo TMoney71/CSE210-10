@@ -1,9 +1,11 @@
+# from typing_extensions import Self
 import constants 
 
 from Game.Casting.Cast import Cast
 from Game.Casting.Snake import Snake
 from Game.Casting.Food import Food
 from Game.Casting.Score import Score
+from Game.Scripting.Action import Action
 from Game.Scripting.Script import Script
 from Game.Scripting.Control_actors_action import ControlActorsAction
 from Game.Scripting.Move_actors_action import MoveActorsAction
@@ -32,7 +34,7 @@ def main():
     script.add_action("output", DrawActorsAction(video_service))
     
     director = Director(video_service)
-    director.start_game(cast, script)
+    director.start_game(self, cast, script)
 
 if __name__ == "__main__":
     main()
