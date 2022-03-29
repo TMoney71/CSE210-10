@@ -23,6 +23,10 @@ class Director:
         for action in actions:
             action.execute(cast, script)     
 
+if __name__ == "__main__":
+    main()
+
+
 
 
 
