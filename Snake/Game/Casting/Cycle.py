@@ -35,7 +35,7 @@ class Cycle(Actor):
     def get_head(self):
         return self._segments[0]
 
-    def grow_tail(self, number_of_segments):
+    def grow_trail(self, number_of_segments):
         for i in range(number_of_segments):
             tail = self._segments[-1]
             velocity = tail.get_velocity()
@@ -60,10 +60,10 @@ class Cycle(Actor):
         y = 0.0
 
         if (self._cycle_color == constants.RED):
-            x = int(constants.MAX_X / 40)
+            x = int(20)
             y = int(constants.MAX_Y / 40)
         else:
-            x = int(constants.MAX_X / 2)
+            x = int(-20)
             y = int(constants.MAX_Y / 2)
 
 
