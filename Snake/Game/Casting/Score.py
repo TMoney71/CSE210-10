@@ -14,8 +14,10 @@ class Score(Actor):
 
     def __init__(self):
         super().__init__()
+        self._name = player
         self._points = 0
         self.add_points(0)
+        self.set_position(position)
 
     def add_points(self, points):
         """Adds the given points to the score's total points.
@@ -24,4 +26,4 @@ class Score(Actor):
             points (int): The points to add.
         """
         self._points += points
-        self.set_text(f"Score: {self._points}")
+        self.set_text(f"{self._name}: {self._points}")
